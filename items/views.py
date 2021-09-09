@@ -10,11 +10,29 @@ from rest_framework.permissions import IsAuthenticatedOrReadOnly, IsAuthenticate
 from .models import Item, Comment
 from .serializers import CommentSerializer, ItemSerializer
 
-class ItemListView(ListCreateAPIView):
-    '''List View for /items INDEX CREATE'''
-    queryset = Item.objects.all()
-    serializer_class = ItemSerializer
-    permission_classes = (IsAuthenticatedOrReadOnly, )
+# class ItemListView(ListCreateAPIView):
+#     '''List View for /items INDEX CREATE'''
+#     queryset = Item.objects.all()
+#     serializer_class = ItemSerializer
+#     permission_classes = (IsAuthenticatedOrReadOnly, )
+
+#     def post(self, request, item_pk):
+#         request.data['item'] = item_pk
+#         request.data['sold_by'] = request.user.id
+#         item = ItemSerializer()
+#         return Response(item.data, status=status.HTTP_201_CREATED)
+
+class ItemListView(APIView):
+
+    permission_classes = (IsAuthenticated, )
+
+    def post(self, request):
+        request.data['sold_by'] = request.user.id
+        created_item = ItemSerializer(data=request.data)
+        if created_item.is_valid():
+            created_item.save()
+            return Response(created_item.data, status=status.HTTP_201_CREATED)
+        return Response(created_item.errors, status=status.HTTP_422_UNPROCESSABLE_ENTITY)    
 
 class ItemDetailView(RetrieveUpdateDestroyAPIView):
     '''Detail View for /items/id SHOW UPDATE DELETE'''

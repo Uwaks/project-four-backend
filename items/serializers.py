@@ -17,10 +17,22 @@ class CommentSerializer(serializers.ModelSerializer):
 class PopulatedCommentSerializer(CommentSerializer):
     owner = NestedUserSerializer()
 
+class SellerIDSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = '__all__'        
+
 class ItemSerializer(serializers.ModelSerializer):
     comments = PopulatedCommentSerializer(many=True, read_only=True)
     liked_by = NestedUserSerializer(many=True, read_only=True)
-
+    # sold_by = SellerIDSerializer()
+    
     class Meta:
         model = Item
         fields = '__all__'
+
+# class PopulatedSellerSerializer(ItemSerializer):
+#     sold_by = SellerIDSerializer()        
+
+# class SoldBySerializer(ItemSerializer):
+#     sold_by = SellerIDSerializer        
