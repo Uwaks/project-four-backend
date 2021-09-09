@@ -1,0 +1,11 @@
+{
+  "workbench.colorCustomizations": {
+    "statusBar.background": "#f3f021",
+    "titleBar.activeBackground": "#f3f021",
+    "titleBar.inactiveBackground": "#f3f021",
+    "statusBar.foreground": "#000",
+    "titleBar.inactiveForeground": "#000",
+    "titleBar.activeForeground": "#000"
+  },
+  "window.title": "Swap/Shop Backend"
+}
