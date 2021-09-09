@@ -9,6 +9,11 @@ class Item(models.Model):
     price = models.DecimalField(max_digits=10, decimal_places=2)
     description = models.TextField(max_length=350)
     condition = models.CharField(max_length=50)
+    liked_by = models.ManyToManyField(
+        'jwt_auth.User',
+        related_name='liked_items',
+        blank=True
+    )
 
     def __str__(self):
         return f'{self.team_name} - {self.player_name}'
@@ -19,5 +24,10 @@ class Comment(models.Model):
     item = models.ForeignKey(
         Item,
         related_name='comments',
+        on_delete=models.CASCADE
+    )
+    owner = models.ForeignKey(
+        'jwt_auth.User',
+        related_name='comments_made',
         on_delete=models.CASCADE
     )

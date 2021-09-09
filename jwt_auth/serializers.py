@@ -35,9 +35,9 @@ class UserRegisterSerializer(serializers.ModelSerializer):
         fields ='__all__'
 
 class UserProfileSerializer(serializers.ModelSerializer):
-    # liked_characters = CharacterSerializer(many=True)
-    # comments_made = CommentSerializer(many=True)
+    liked_items = ItemSerializer(many=True)
+    comments_made = CommentSerializer(many=True)
 
     class Meta:
         model = User
-        fields = ('username', 'email', 'profile_image')    
+        fields = ('username', 'email', 'profile_image', 'liked_items', 'comments_made')    
