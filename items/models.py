@@ -12,3 +12,12 @@ class Item(models.Model):
 
     def __str__(self):
         return f'{self.team_name} - {self.player_name}'
+
+class Comment(models.Model):
+    text = models.TextField(max_length=300)
+    created_at = models.DateTimeField(auto_now_add=True)
+    item = models.ForeignKey(
+        Item,
+        related_name='comments',
+        on_delete=models.CASCADE
+    )
