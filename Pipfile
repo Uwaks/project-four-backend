@@ -7,6 +7,9 @@ name = "pypi"
 django = "*"
 django-money = "*"
 djangorestframework = "*"
+psycopg2-binary = "*"
+pyjwt = "*"
+djangorestframework-camel-case = "*"
 
 [dev-packages]
 
