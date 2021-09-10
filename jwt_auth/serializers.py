@@ -38,8 +38,10 @@ class UserProfileSerializer(serializers.ModelSerializer):
     liked_items = ItemSerializer(many=True)
     comments_made = CommentSerializer(many=True)
     item_to_sell = ItemSerializer(many=True)
+    # item_bought = ItemSerializer(many=True)
 
 
     class Meta:
         model = User
         fields = ('username', 'email', 'profile_image', 'liked_items', 'comments_made', 'item_to_sell')    
+        # fields = ('username', 'email', 'profile_image', 'liked_items', 'comments_made', 'item_to_sell', 'item_bought')    

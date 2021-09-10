@@ -19,6 +19,12 @@ class Item(models.Model):
         related_name = 'item_to_sell',
         on_delete = models.CASCADE
     )
+    # bought_by = models.ForeignKey(
+    #     'jwt_auth.User',
+    #     related_name = 'item_bought',
+    #     on_delete = models.CASCADE,
+    #     blank=True
+    # )
 
     def __str__(self):
         return f'{self.team_name} - {self.player_name}'

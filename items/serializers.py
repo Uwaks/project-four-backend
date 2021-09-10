@@ -20,12 +20,23 @@ class PopulatedCommentSerializer(CommentSerializer):
 class SellerIDSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ('id', 'username', 'email', 'date_joined')      
+        fields = ('id', 'username', 'email', 'date_joined')     
+
+# class BuyerIDSerializer(serializers.ModelSerializer):
+#     class Meta:
+#         model = User
+#         fields = ('id', 'username', 'email', 'date_joined') 
 
 class ItemSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Item
+        fields = '__all__'
+
+class PopulatedItemSerializer(serializers.ModelSerializer):
     comments = PopulatedCommentSerializer(many=True, read_only=True)
     liked_by = NestedUserSerializer(many=True, read_only=True)
     sold_by = SellerIDSerializer()
+    # bought_by = BuyerIDSerializer(read_only=True)
     
     class Meta:
         model = Item

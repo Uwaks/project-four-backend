@@ -3,18 +3,22 @@ from rest_framework.exceptions import NotFound
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework.generics import (
-    ListAPIView, RetrieveUpdateDestroyAPIView
+    ListAPIView, RetrieveUpdateDestroyAPIView, CreateAPIView
 )
 from rest_framework.permissions import AllowAny, IsAuthenticatedOrReadOnly, IsAuthenticated
 
 from .models import Item, Comment
-from .serializers import CommentSerializer, ItemSerializer
+from .serializers import CommentSerializer, ItemSerializer, PopulatedItemSerializer
 
 class ItemListView(ListAPIView):
-    
-    queryset = Item.objects.all()
-    serializer_class = ItemSerializer
-    permission_classes = (AllowAny, )
+    #GET ALL ITEMS
+
+    permission_classes = (IsAuthenticatedOrReadOnly, )
+
+    def get(self, request):
+        items = Item.objects.all()
+        serialized_items = PopulatedItemSerializer(items, many=True)
+        return Response(serialized_items.data, status=status.HTTP_200_OK)
 
 # class ItemListView(ListCreateAPIView):
 #     '''List View for /items INDEX CREATE'''
@@ -27,6 +31,12 @@ class ItemListView(ListAPIView):
 #         request.data['sold_by'] = request.user.id
 #         item = ItemSerializer()
 #         return Response(item.data, status=status.HTTP_201_CREATED)
+
+# class ItemCreateView(CreateAPIView):
+
+#     permission_classes = (IsAuthenticatedOrReadOnly, )
+
+#     def post(self, request, format=None):
 
 class ItemCreateView(APIView):
 
@@ -43,7 +53,7 @@ class ItemCreateView(APIView):
 class ItemDetailView(RetrieveUpdateDestroyAPIView):
     '''Detail View for /items/id SHOW UPDATE DELETE'''
     queryset = Item.objects.all()
-    serializer_class = ItemSerializer
+    serializer_class = PopulatedItemSerializer
     permission_classes = (IsAuthenticatedOrReadOnly, )
 
 class CommentListView(APIView):
