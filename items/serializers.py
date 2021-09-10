@@ -20,12 +20,12 @@ class PopulatedCommentSerializer(CommentSerializer):
 class SellerIDSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = '__all__'        
+        fields = ('id', 'username', 'email', 'date_joined')      
 
 class ItemSerializer(serializers.ModelSerializer):
     comments = PopulatedCommentSerializer(many=True, read_only=True)
     liked_by = NestedUserSerializer(many=True, read_only=True)
-    # sold_by = SellerIDSerializer()
+    sold_by = SellerIDSerializer()
     
     class Meta:
         model = Item

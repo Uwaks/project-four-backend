@@ -3,12 +3,18 @@ from rest_framework.exceptions import NotFound
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework.generics import (
-    ListCreateAPIView, RetrieveUpdateDestroyAPIView
+    ListAPIView, RetrieveUpdateDestroyAPIView
 )
-from rest_framework.permissions import IsAuthenticatedOrReadOnly, IsAuthenticated
+from rest_framework.permissions import AllowAny, IsAuthenticatedOrReadOnly, IsAuthenticated
 
 from .models import Item, Comment
 from .serializers import CommentSerializer, ItemSerializer
+
+class ItemListView(ListAPIView):
+    
+    queryset = Item.objects.all()
+    serializer_class = ItemSerializer
+    permission_classes = (AllowAny, )
 
 # class ItemListView(ListCreateAPIView):
 #     '''List View for /items INDEX CREATE'''
@@ -22,7 +28,7 @@ from .serializers import CommentSerializer, ItemSerializer
 #         item = ItemSerializer()
 #         return Response(item.data, status=status.HTTP_201_CREATED)
 
-class ItemListView(APIView):
+class ItemCreateView(APIView):
 
     permission_classes = (IsAuthenticated, )
 
