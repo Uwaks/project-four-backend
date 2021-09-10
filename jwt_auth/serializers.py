@@ -1,5 +1,5 @@
 from rest_framework.fields import ReadOnlyField
-from items.serializers import ItemSerializer, CommentSerializer, PopulatedItemSerializer
+from items.serializers import ItemSerializer, CommentSerializer, NestedUserSerializer, PopulatedItemSerializer
 from rest_framework import serializers
 from django.contrib.auth import get_user_model
 # import django.contrib.auth.password_validation as validation
@@ -39,9 +39,10 @@ class UserProfileSerializer(serializers.ModelSerializer):
     comments_made = CommentSerializer(many=True)
     item_to_sell = ItemSerializer(many=True)
     item_bought = PopulatedItemSerializer(many=True)
+    followed_by = NestedUserSerializer(many=True)
 
 
     class Meta:
         model = User
         # fields = ('username', 'email', 'profile_image', 'liked_items', 'comments_made', 'item_to_sell')    
-        fields = ('username', 'email', 'profile_image', 'liked_items', 'comments_made', 'item_to_sell', 'item_bought')    
+        fields = ('username', 'email', 'profile_image', 'liked_items', 'comments_made', 'item_to_sell', 'item_bought', 'followed_by')    

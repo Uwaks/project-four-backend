@@ -3,7 +3,7 @@ import rest_framework
 from rest_framework import serializers
 from rest_framework.views import APIView
 from rest_framework.response import Response
-from rest_framework.exceptions import PermissionDenied
+from rest_framework.exceptions import NotFound, PermissionDenied
 from rest_framework.permissions import IsAuthenticated
 from rest_framework import status
 from django.contrib.auth import get_user_model
@@ -58,3 +58,22 @@ class ProfileView(APIView):
     def get(self, request):
         serialized_user = UserProfileSerializer(request.user)
         return Response(serialized_user.data, status=status.HTTP_200_OK)
+
+class FollowUser(APIView):
+    '''Follows User or Unfollows if already Followed'''
+    permission_classes = (IsAuthenticated, )
+
+    def  post(self, request, user_pk):
+        try:
+            user_to_follow = User.objects.get(pk=user_pk)
+        except User.DoesNotExist:
+            raise NotFound()
+
+        if request.user in user_to_follow.followed_by.all():
+            user_to_follow.followed_by.remove(request.user.id)
+        else: 
+            user_to_follow.followed_by.add(request.user.id)        
+
+        serialized_user = UserProfileSerializer(user_to_follow)  
+
+        return Response(serialized_user.data, status=status.HTTP_202_ACCEPTED)             

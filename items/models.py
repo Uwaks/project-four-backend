@@ -11,8 +11,8 @@ class Item(models.Model):
     condition = models.CharField(max_length=50)
     liked_by = models.ManyToManyField(
         'jwt_auth.User',
-        related_name='liked_items',
-        blank=True
+        related_name = 'liked_items',
+        blank = True
     )
     sold_by = models.ForeignKey(
         'jwt_auth.User',
@@ -22,8 +22,8 @@ class Item(models.Model):
     bought_by = models.ForeignKey(
         'jwt_auth.User',
         related_name = 'item_bought',
-        blank=True,
-        default='',
+        blank = True,
+        default = '',
         on_delete = models.CASCADE
     )
 
@@ -35,11 +35,11 @@ class Comment(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     item = models.ForeignKey(
         Item,
-        related_name='comments',
-        on_delete=models.CASCADE
+        related_name = 'comments',
+        on_delete = models.CASCADE
     )
     owner = models.ForeignKey(
         'jwt_auth.User',
-        related_name='comments_made',
-        on_delete=models.CASCADE
+        related_name = 'comments_made',
+        on_delete = models.CASCADE
     )

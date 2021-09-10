@@ -80,6 +80,7 @@ class CommentDetailView(APIView):
         try:
             comment_to_delete = Comment.objects.get(pk=comment_pk)
             comment_to_delete.delete()
+            # item_comment_to_delete = Item.objects.get(pk=)
             return Response(status=status.HTTP_204_NO_CONTENT)
         except Comment.DoesNotExist:
             raise NotFound(detail='Comment Not Found')
