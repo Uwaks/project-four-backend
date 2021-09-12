@@ -1,0 +1,302 @@
+[
+{
+  "model": "items.item",
+  "pk": 15,
+  "fields": {
+    "player_name": "John Devine",
+    "team_name": "Arsenal Football Club",
+    "image": "https://nirvanacph.com/welcome/wp-content/uploads/2012/04/1982-1983.jpg",
+    "price": "90.00",
+    "description": "Vintage red and white kit - 1983",
+    "condition": "Excellent",
+    "sold_by": 1,
+    "bought_by": null,
+    "liked_by": []
+  }
+},
+{
+  "model": "items.item",
+  "pk": 16,
+  "fields": {
+    "player_name": "Tobin Heath",
+    "team_name": "Arsenal Football Club",
+    "image": "https://x1.adis.ws/v1/media/graphics/i/ArsenalDirect/WGQ3241_wsl?patches=patches_WGQ3241-wsl&name=HEATH&numbers=wsl-home__2021-22--77&h=814",
+    "price": "120.00",
+    "description": "Authentic kit for new striker Tobin Heath.",
+    "condition": "Mint",
+    "sold_by": 1,
+    "bought_by": null,
+    "liked_by": []
+  }
+},
+{
+  "model": "items.item",
+  "pk": 17,
+  "fields": {
+    "player_name": "Tyrone Mings",
+    "team_name": "Aston Villa",
+    "image": "https://images.footballfanatics.com/aston-villa/aston-villa-away-shirt-2021-22-womens-with-mings-5-printing_ss4_p-12090442+pv-2+u-sjq4pvk30jw52gs5x1ob+v-6b1773f39ad345b7a5d058c3c84cc1d3.jpg?_hv=1&w=900",
+    "price": "72.00",
+    "description": "Women's kit for Aston Villa, Tyrone Mings. Size Small.",
+    "condition": "Good",
+    "sold_by": 1,
+    "bought_by": null,
+    "liked_by": []
+  }
+},
+{
+  "model": "items.item",
+  "pk": 18,
+  "fields": {
+    "player_name": "Dion Dublin",
+    "team_name": "Aston Villa",
+    "image": "https://www.vintagefootballshirts.com/uploads/products/images/2000-01-aston-villa-home-shirt-25992-1.jpg",
+    "price": "35.00",
+    "description": "Home shirt as worn when the side finished 10th in the Premier League, when they proved to be a very hard team to beat under manager John Gregory. Size large.",
+    "condition": "Excellent",
+    "sold_by": 1,
+    "bought_by": null,
+    "liked_by": []
+  }
+},
+{
+  "model": "items.item",
+  "pk": 19,
+  "fields": {
+    "player_name": "Patrik Gunnarson",
+    "team_name": "Brentford Football Club",
+    "image": "https://shop.brentfordfc.com/siteimg/productimages/legend/2467.jpg",
+    "price": "38.00",
+    "description": "Brentford goalkeeper kit. Size Large. Worn once.",
+    "condition": "Excellent",
+    "sold_by": 1,
+    "bought_by": null,
+    "liked_by": []
+  }
+},
+{
+  "model": "items.item",
+  "pk": 20,
+  "fields": {
+    "player_name": "Christian Nørgaard",
+    "team_name": "Brentford Football Club",
+    "image": "https://shop.brentfordfc.com/siteimg/productimages/legend/2437.jpg",
+    "price": "50.00",
+    "description": "Brentford FC Women's kit with #6 Norgaard. Size Medium.",
+    "condition": "Good",
+    "sold_by": 1,
+    "bought_by": null,
+    "liked_by": []
+  }
+},
+{
+  "model": "items.item",
+  "pk": 21,
+  "fields": {
+    "player_name": "Danielle Carter",
+    "team_name": "Brighton and Hove Albion",
+    "image": "https://shop.brightonandhovealbion.com/siteimg/prodhires/2583-620.jpg",
+    "price": "20.00",
+    "description": "Women's team player Danielle Carter #18 kit.",
+    "condition": "Excellent",
+    "sold_by": 1,
+    "bought_by": null,
+    "liked_by": []
+  }
+},
+{
+  "model": "items.item",
+  "pk": 22,
+  "fields": {
+    "player_name": "John Byrne",
+    "team_name": "Brighton and Hove Albion",
+    "image": "https://www.oldfootballshirts.com/img/shirts/50/thumbs/football_shirt_6448_1_369x492x1.jpg",
+    "price": "70.00",
+    "description": "1991 - 1993 Brighton & Hove Albion home football shirt. This is a John Byrne matchworn shirt.\r\nJohn took part in 2 cycle rides to raise money for the The Argus 50 Appeal and The British Heart Foundation .\r\nJohn is my all time favourite Albion player, I took this opportunity to buy this shirt after he agreed to sell it for a donation to both causes.",
+    "condition": "Match Worn",
+    "sold_by": 1,
+    "bought_by": null,
+    "liked_by": []
+  }
+},
+{
+  "model": "items.item",
+  "pk": 23,
+  "fields": {
+    "player_name": "Andy Farrell",
+    "team_name": "Burnley Football Club",
+    "image": "https://www.medocmall.co.uk/images/shop_burnleyfc/products/large/1988AWAY.jpg",
+    "price": "30.00",
+    "description": "SCORE DRAW 1988 AWAY SHIRT",
+    "condition": "Good",
+    "sold_by": 1,
+    "bought_by": null,
+    "liked_by": []
+  }
+},
+{
+  "model": "items.item",
+  "pk": 24,
+  "fields": {
+    "player_name": "Kevin Long",
+    "team_name": "Burnley Football Club",
+    "image": "https://www.medocmall.co.uk/images/shop_burnleyfc/products/large/HOMESHIRT2122.jpg",
+    "price": "42.00",
+    "description": "Home kit for 2021/2022 season.",
+    "condition": "Excellent",
+    "sold_by": 1,
+    "bought_by": null,
+    "liked_by": []
+  }
+},
+{
+  "model": "items.item",
+  "pk": 25,
+  "fields": {
+    "player_name": "Kerry Dixon",
+    "team_name": "Chelsea Football Club",
+    "image": "https://images.footballfanatics.com/chelsea/chelsea-1984-home-shirt_ss4_p-11810884+u-z7ofaexy2ahiwpyvwnx+v-3c6de085375c463888bec5e9ea80919e.jpg?_hv=1&w=900",
+    "price": "43.00",
+    "description": "Kerry Dixon signed Chelsea FC jersey made to commemorate the striker's 193 goals scored for the football club.",
+    "condition": "Mint",
+    "sold_by": 1,
+    "bought_by": null,
+    "liked_by": []
+  }
+},
+{
+  "model": "items.item",
+  "pk": 26,
+  "fields": {
+    "player_name": "Romelu Lukaku",
+    "team_name": "Chelsea Football Club",
+    "image": "https://images.footballfanatics.com/chelsea/chelsea-third-stadium-shirt-2021-22_ss4_p-12059934+pv-1+u-3zpq8i76w0352j3cpxls+v-1b20b6bd1d0c41a28892604e69348516.jpg?_hv=1&w=900",
+    "price": "65.00",
+    "description": "The Chelsea FC Stadium Third Jersey features team details on highly breathable fabric to help keep you cool and dry on the field or in the stands cheering for your team.",
+    "condition": "Excellent",
+    "sold_by": 1,
+    "bought_by": null,
+    "liked_by": []
+  }
+},
+{
+  "model": "items.item",
+  "pk": 27,
+  "fields": {
+    "player_name": "Joel Ward",
+    "team_name": "Crystal Palace Football Club",
+    "image": "https://shop.cpfc.co.uk/siteimg/prodhires/3558-403.jpg",
+    "price": "75.00",
+    "description": "Slim, tailored fit shirt as worn by the players. Crystal Palace F.C. crest on the left chest, Puma logo on the right chest and each shoulder.",
+    "condition": "Mint",
+    "sold_by": 1,
+    "bought_by": null,
+    "liked_by": []
+  }
+},
+{
+  "model": "items.item",
+  "pk": 28,
+  "fields": {
+    "player_name": "Jairo Riedewald",
+    "team_name": "Crystal Palace Football Club",
+    "image": "https://shop.cpfc.co.uk/siteimg/productimages/legend/1827.jpg",
+    "price": "45.00",
+    "description": "Riedewald kit size medium.",
+    "condition": "Mint",
+    "sold_by": 1,
+    "bought_by": null,
+    "liked_by": []
+  }
+},
+{
+  "model": "items.item",
+  "pk": 29,
+  "fields": {
+    "player_name": "Jordan Pickford",
+    "team_name": "Everton Football Club",
+    "image": "https://images.footballfanatics.com/everton/everton-away-goalkeeper-shirt-2020-21-kids-with-pickford-1-printing_ss4_p-12019820+pv-2+u-5esbugsszg5dycirrvpa+v-ebc3658081e34e3395fd646e3368b2bd.jpg?_hv=1&w=900",
+    "price": "45.00",
+    "description": "Pickford away kit. Size Small.",
+    "condition": "Good",
+    "sold_by": 1,
+    "bought_by": null,
+    "liked_by": []
+  }
+},
+{
+  "model": "items.item",
+  "pk": 30,
+  "fields": {
+    "player_name": "Andros Townsend",
+    "team_name": "Everton Football Club",
+    "image": "https://images.footballfanatics.com/everton/everton-home-shirt-2021-22_ss4_p-12057112+pv-1+u-1gu43ztu7yuug591msr4+v-7daf78b5b7514992be23f43f247c85e5.jpg?_hv=1&w=900",
+    "price": "60.00",
+    "description": "Take to the pitch like your heroes in the official home kit of Everton for the 2021-22 season. The shirt's design is inspired by naval 'Dazzle' camouflage from the First World War, much of the application of which was done in Liverpool's dry docks, making it much harder for the enemy to estimate a vessel's speed, range and heading.",
+    "condition": "Excellent",
+    "sold_by": 1,
+    "bought_by": null,
+    "liked_by": []
+  }
+},
+{
+  "model": "items.item",
+  "pk": 31,
+  "fields": {
+    "player_name": "Luke Ayling",
+    "team_name": "Leeds United Football Club",
+    "image": "https://i2-prod.examinerlive.co.uk/incoming/article19154157.ece/ALTERNATES/s810/0_unnamed-2.jpg",
+    "price": "100.00",
+    "description": "An opportunity for a fan to get their hands on a rare Remembrance Day, poppy embossed shirt worn by Ayling during the club’s 2-1 victory against Blackburn Rovers last year. It is signed on the front and back by the star.",
+    "condition": "Match Worn",
+    "sold_by": 1,
+    "bought_by": null,
+    "liked_by": []
+  }
+},
+{
+  "model": "items.item",
+  "pk": 32,
+  "fields": {
+    "player_name": "Abbie Brown",
+    "team_name": "Leeds United Football Club",
+    "image": "https://shop.leedsunited.com/media/catalog/product/j/e/jer20201.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=520&width=520&canvas=520:520",
+    "price": "30.00",
+    "description": "Ladies home jersey",
+    "condition": "Excellent",
+    "sold_by": 1,
+    "bought_by": null,
+    "liked_by": []
+  }
+},
+{
+  "model": "items.item",
+  "pk": 33,
+  "fields": {
+    "player_name": "Jamie Vardy",
+    "team_name": "Leicester City Football Club",
+    "image": "https://shop.lcfc.com/static/version1631270913/frontend/Lcfc/Main/en_GB/Lcfc_ProductPersonalisation/images/generator/1/adult/blue/9.png",
+    "price": "60.00",
+    "description": "Introducing a bold new look for 2021/22 on the road - our new 2021/22 mint away shirt. Featuring an authentic and distinctive design, our new shirt’s soft and lightweight fabric is finished with moisture-absorbing AEROREADY technology, keeping you dry on the pitch or when worn as your everyday style.",
+    "condition": "Mint",
+    "sold_by": 1,
+    "bought_by": null,
+    "liked_by": []
+  }
+},
+{
+  "model": "items.item",
+  "pk": 34,
+  "fields": {
+    "player_name": "Kasper Schmeichel",
+    "team_name": "Leicester City Football Club",
+    "image": "https://shop.lcfc.com/media/catalog/product/l/c/lcfc-gk-21jsy-jersey-02-back_ss.2_1.jpg",
+    "price": "65.00",
+    "description": "Leicester City S/S Goalkeeper Shirt Yellow 2021/22",
+    "condition": "Good",
+    "sold_by": 1,
+    "bought_by": null,
+    "liked_by": []
+  }
+}
+]
