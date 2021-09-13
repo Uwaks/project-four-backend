@@ -10,6 +10,7 @@ djangorestframework = "*"
 psycopg2-binary = "*"
 pyjwt = "*"
 djangorestframework-camel-case = "*"
+faker = "*"
 
 [dev-packages]
 
