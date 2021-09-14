@@ -46,6 +46,7 @@ class ItemCreateView(APIView):
         request.data['sold_by'] = request.user.id
         created_item = ItemSerializer(data=request.data)
         if created_item.is_valid():
+            print('working round 3')
             created_item.save()
             return Response(created_item.data, status=status.HTTP_201_CREATED)
         return Response(created_item.errors, status=status.HTTP_422_UNPROCESSABLE_ENTITY)    
