@@ -10,7 +10,12 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
+import os
 from pathlib import Path
+import django_on_heroku
+from dotenv import load_dotenv
+import dj_database_url
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -20,10 +25,16 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-os_#8yjcifdv(#im60y02tt3+4_u1e!0q6xsll^8fvf^st#5b6'
+
+if str(os.getenv('ENVIRONMENT')) == 'development':
+    SECRET_KEY = 'django-insecure-os_#8yjcifdv(#im60y02tt3+4_u1e!0q6xsll^8fvf^st#5b6' # should be whatever your original key was
+else:
+    SECRET_KEY = str(os.getenv('SECRET_KEY'))
+
+# SECRET_KEY = 'django-insecure-os_#8yjcifdv(#im60y02tt3+4_u1e!0q6xsll^8fvf^st#5b6'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = True if str(os.getenv('ENVIRONMENT')) == 'development' else False
 
 ALLOWED_HOSTS = []
 
@@ -76,14 +87,27 @@ WSGI_APPLICATION = 'project.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
+
+
+DATABASES = {}
+if str(os.getenv('ENVIRONMENT')) == 'development':
+    DATABASES['default'] =  {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'swap-shop-db',
+        'NAME': 'swap-shop-db', # < --- make sure you chage this
         'HOST': 'localhost',
         'PORT': 5432
     }
-}
+else:
+    DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'swap-shop-db',
+#         'HOST': 'localhost',
+#         'PORT': 5432
+#     }
+# }
 
 
 # Password validation
@@ -144,3 +168,5 @@ REST_FRAMEWORK = {
 }
 
 AUTH_USER_MODEL = 'jwt_auth.User'
+
+django_on_heroku.settings(locals())
