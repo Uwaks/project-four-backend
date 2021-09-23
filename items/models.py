@@ -24,6 +24,7 @@ class Item(models.Model):
         related_name = 'item_bought',
         blank = True,
         default = '',
+        null = True,
         on_delete = models.CASCADE
     )
 
