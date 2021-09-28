@@ -36,6 +36,7 @@ else:
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True if str(os.getenv('ENVIRONMENT')) == 'development' else False
 
+
 ALLOWED_HOSTS = []
 
 
@@ -88,7 +89,7 @@ WSGI_APPLICATION = 'project.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 
-
+print(os.getenv('ENVIRONMENT'))
 DATABASES = {}
 if str(os.getenv('ENVIRONMENT')) == 'development':
     DATABASES['default'] =  {
