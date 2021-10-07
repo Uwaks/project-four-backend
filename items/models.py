@@ -23,6 +23,7 @@ class Item(models.Model):
         'jwt_auth.User',
         related_name = 'item_bought',
         blank = True,
+        null = True,
         default = '',
         on_delete = models.CASCADE
     )
