@@ -81,7 +81,7 @@ Once we had finalised our app idea we moved on to sketching out some wireframes 
 
 ### Project management
 
-All of our project management tasks were done on a Trello board
+All of our project management tasks were done on a Trello board.
 
 ![trello board](https://github.com/Uwaks/project-four-frontend/blob/main/src/assets/trello-board.png "Trello Board")
 
