@@ -48,28 +48,28 @@ Access the source code via the 'clone or download' button.
 - PostgreSQL
 
 ## Demonstration/cover image 
-![screenshot](src/assets/Screenshot.png)
+![screenshot](https://github.com/Uwaks/project-four-frontend/blob/main/src/assets/Screenshot.png)
 
 ## User Journey
 User Registration
 
-![registration form](src/assets/register-form.png "Registration Form")
+![registration form](https://github.com/Uwaks/project-four-frontend/blob/main/src/assets/register-form.png "Registration Form")
 
 User login
 
-![login form](src/assets/login-screen.png "Login Form")
+![login form](https://github.com/Uwaks/project-four-frontend/blob/main/src/assets/login-screen.png "Login Form")
 
 Search items
 
-![search items](src/assets/index-search.png)
+![search items](https://github.com/Uwaks/project-four-frontend/blob/main/src/assets/index-search.png)
 
 Item added to cart
 
-![cart](src/assets/cart.png)
+![cart](https://github.com/Uwaks/project-four-frontend/blob/main/src/assets/cart.png)
 
 Proceed to checkout
 
-![checkout](src/assets/checkout.png)
+![checkout](https://github.com/Uwaks/project-four-frontend/blob/main/src/assets/checkout.png)
 
 ## Process
 
@@ -77,13 +77,13 @@ Proceed to checkout
 
 Once we had finalised our app idea we moved on to sketching out some wireframes showing user views available to logged in/guest users. We then mapped out all of the relationships we needed to build our various models for the items, users and comments.
 
-![er diagram](src/assets/erdiagram.png "ER Diagram")
+![er diagram](https://github.com/Uwaks/project-four-frontend/blob/main/src/assets/erdiagram.png "ER Diagram")
 
 ### Project management
 
 All of our project management tasks were done on a Trello board
 
-![trello board](src/assets/trello-board.png "Trello Board")
+![trello board](https://github.com/Uwaks/project-four-frontend/blob/main/src/assets/trello-board.png "Trello Board")
 
 ### Backend development
 
